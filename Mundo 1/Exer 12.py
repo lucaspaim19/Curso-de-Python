@@ -1,7 +1,11 @@
-p = float(input("Digite um preço: "))
+p = float(input("Digite um preço: R$ "))
 
-d = (p*0.05)
+vc = float(input("Digite o valor de desconto: "))
+
+pv = vc/100
+
+d = (p*pv)
 
 pd = p-d
 
-print('Seu produto custava R$ {:.2f} com desconto de 5% = {:.2f} , ficará R$ {:.2f}'.format(p,d,pd))
+print('Seu produto custava R$ {:.2f} com desconto de {}% = {:.2f} , ficará R$ {:.2f}'.format(p,vc,d,pd))
